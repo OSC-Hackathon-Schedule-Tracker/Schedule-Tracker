@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "discord.js": "^14.14.1",
     "node": "^21.7.1"
   }
 }
