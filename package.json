@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "@google-ai/generativelanguage": "^2.1.0",
     "discord.js": "^14.14.1",
-    "node": "^21.7.1"
+    "google-auth": "^0.0.1",
+    "node": "^21.7.1",
+    "openai": "^4.29.2"
   }
 }
