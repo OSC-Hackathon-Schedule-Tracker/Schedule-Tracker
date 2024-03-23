@@ -1,6 +1,7 @@
 
 const { Client, Events, GatewayIntentBits } = require("discord.js");
 const { token } = require("./config.json");
+const { main } = require("./open.js");
 
 
 const bot = new Client({ intents: [
@@ -13,12 +14,14 @@ const bot = new Client({ intents: [
 
 
 bot.once(Events.ClientReady, readyClient => {
-    console.log("Logged in as ${bot.user.tag}");
+    console.log("Logged in as " + bot.user.tag);
 });
 
-bot.on("messageCreate", message => {
+bot.on("messageCreate", async (message) => {
     if(message.channel.name == "announcements") {
-        console.log(message.content);
+        const date = "March 23rd";
+        const response = await main(message.content, date);
+        console.log(response);
     }
 });
 
