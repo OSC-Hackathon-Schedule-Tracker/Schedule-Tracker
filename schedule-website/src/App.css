@@ -1,52 +1,81 @@
 body {
-  background-color: whitesmoke; /* Change this to your desired color */
+  background-color: whitesmoke;
 }
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 15vmin;
   pointer-events: none;
   position: absolute;
   top: 0;
   right: 0;
 }
 
+.App-secondlogo {
+  height: 15vmin;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text-box-container {
+  display: flex;
+  flex-wrap: wrap; /* This allows the boxes to wrap onto the next line if there isn't enough space */
+  justify-content: space-around; /* This spaces the boxes evenly */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 5s linear;
   }
+
+  .App-secondlogo {
+    animation: App-secondlogo-spin infinite 5s linear;
+    /* Add other CSS properties as needed */
+  }
+  
 }
 
 .App-header {
-  background-color: orange;
-  min-height: 200vh;
+  background-color: #0021A5;
+  min-height: 137px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Removed justify-content: center; */
-  font-size: calc(35px + 2vmin);
-  font-family: Arial, Helvetica, sans-serif;
-  color: blue;
+  font-size: calc(30px + 5vmin);
+  font-weight: bold;
+  font-family: Fira Sans;
+  color: whitesmoke;
+  width: 100%;
+  justify-content: center;
+}
+
+.welcome-text {
+  font-size: calc(80px + 2vmin);
+  font-weight: bold; /* Add this line */
 }
 
 .text-box {
-  width: 500px; 
-  height: 100px; 
+  width: 350px; 
+  height: 700px; 
   border: 1.5px solid black;
-  margin: 10px; 
+  margin: 80px; 
   padding: 10px; 
-  background-color: #f8f8f8; 
+  background-color: white; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
