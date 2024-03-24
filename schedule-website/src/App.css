@@ -1,5 +1,13 @@
+#root{
+    font-family: "Roboto Slab", serif;
+    font-size: 25px;
+    margin-top: 0%;
+
+}
+
 body {
-  background-color: whitesmoke;
+  background-color: white;
+  overflow-x: hidden;
 }
 
 .App {
@@ -28,9 +36,45 @@ body {
 
 .text-box-container {
   display: flex;
-  flex-wrap: wrap; /* This allows the boxes to wrap onto the next line if there isn't enough space */
-  justify-content: space-around; /* This spaces the boxes evenly */
+  flex-direction: column;
+  justify-content: space-around; 
+  overflow-y: auto;
+  gap: 0px; 
+  margin-top: 2px;
 }
+
+.underlined-text {
+  font-size: 22.5px;
+  border-bottom: 3px solid #FA4616;
+  width: 62.5%; 
+  margin: auto; 
+  text-align: left; /* Adjust this line */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #FA4616;
+}
+
+
+body::before, body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 15%; /* Adjust this value to change the width of the rectangles */
+  height: 100%;
+  background-color: rgb(238, 238, 238);
+  z-index: -1;
+}
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0;
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -39,7 +83,6 @@ body {
 
   .App-secondlogo {
     animation: App-secondlogo-spin infinite 5s linear;
-    /* Add other CSS properties as needed */
   }
   
 }
@@ -52,7 +95,7 @@ body {
   align-items: center;
   font-size: calc(30px + 5vmin);
   font-weight: bold;
-  font-family: Fira Sans;
+  font-family: "Roboto Slab", serif; 
   color: whitesmoke;
   width: 100%;
   justify-content: center;
@@ -60,14 +103,16 @@ body {
 
 .welcome-text {
   font-size: calc(80px + 2vmin);
-  font-weight: bold; /* Add this line */
+  font-weight: bold; 
 }
 
 .text-box {
-  width: 350px; 
-  height: 700px; 
+  font-size: 20px;
+  font-family: "Roboto Slab", serif;
+  width: 700px; 
+  height: 150px; 
   border: 1.5px solid black;
-  margin: 80px; 
+  margin: 20px; 
   padding: 10px; 
   background-color: white; 
   overflow-y: auto;
