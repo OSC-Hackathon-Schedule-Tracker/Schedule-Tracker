@@ -44,17 +44,18 @@ body {
 }
 
 .underlined-text {
-  font-size: 22.5px;
-  border-bottom: 3px solid #FA4616;
+  font-size: 25px;
+  border-bottom: 2px solid #FA4616;
   width: 62.5%; 
   margin: auto; 
-  text-align: left; /* Adjust this line */
+  text-align: left; 
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
   color: #FA4616;
+  padding-top: 70px;
+  padding-bottom: 5px;
 }
-
 
 body::before, body::after {
   content: "";
@@ -62,19 +63,31 @@ body::before, body::after {
   top: 0;
   width: 15%; /* Adjust this value to change the width of the rectangles */
   height: 100%;
-  background-color: rgb(238, 238, 238);
+  background: url('./contentimage.jpg'); /* Set the background image */
+  background-size: cover; /* Make the image cover the entire div */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   z-index: -1;
 }
 
 body::before {
   left: 0;
+  background-position: left; /* Add this line */
 }
 
 body::after {
   right: 0;
+  background-position: right; /* Add this line */
 }
 
-
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -107,9 +120,10 @@ body::after {
 }
 
 .text-box {
+  text-align: left;
   font-size: 20px;
   font-family: "Roboto Slab", serif;
-  width: 700px; 
+  width: 900px; 
   height: 150px; 
   border: 1.5px solid black;
   margin: 20px; 
