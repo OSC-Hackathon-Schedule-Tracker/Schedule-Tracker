@@ -6,7 +6,6 @@ function datepassed(event, curdate, curtime) {
 
     eventdate = event[2].trim();
     eventtime = event[3].trim();
-    
 
     if (eventdate === curdate) {
         if (curtime.indexOf("PM") != -1 && eventtime.indexOf("am" != -1)) {
@@ -74,6 +73,10 @@ function parse(rawstring) {
         eventtime = data[2].toLowerCase();
         eventloca = data[3];
         temp = eventtime;
+
+        if (eventdate.length < 8) {
+            eventdate = "0" + eventdate;
+        }
 
         if (eventtime.indexOf("-") != -1)
         {
