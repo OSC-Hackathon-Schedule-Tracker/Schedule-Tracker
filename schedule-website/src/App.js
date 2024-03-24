@@ -12,6 +12,21 @@ function App() {
       .then(data => setSchedule(data));
   }, []);
 
+  const formatEventData = (data) => {
+    return Object.entries(data).map(([clubName, events]) => (
+      <div key={clubName} className="text-box">
+        <strong>{clubName}:</strong>
+        <ul>
+          {events.map((event, index) => (
+            <li key={index}>
+              - {event[0]}, Date: {event[1]}, Time: {event[2]}, Location: {event[3] === '~' ? 'null' : event[3]}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ));
+  };
+
   return (
     <>
       <div className="App">
@@ -24,11 +39,9 @@ function App() {
         <div className="underlined-text">UPCOMING EVENTS AND ANNOUNCEMENTS</div>
 
         <div className="text-box-container">
-          {Object.entries(schedule).length > 0 ? Object.entries(schedule).map(([club, events], index) => (
-            <div key={index} className="text-box">
-              <strong>{club}:</strong> {events.map(event => event.join(', ')).join('; ')}
-            </div>
-          )) : (
+          {Object.entries(schedule).length > 0 ? (
+            formatEventData(schedule)
+          ) : (
             <>
               <div className="text-box">Open Source Club: event this,event that</div>
               <div className="text-box">HAHAHAHAHAH</div>
@@ -47,6 +60,3 @@ function App() {
 }
 
 export default App;
-
-
-

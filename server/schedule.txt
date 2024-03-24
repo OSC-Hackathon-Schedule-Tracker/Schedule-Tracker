@@ -1,0 +1,4 @@
+ScheduleTracker Test Server, Hackathon,  03/28/24,  8:30 pm,  ~
+ScheduleTracker Test Server, Casual Coding,  03/24/24,  4 am,  TURL011
+Surf Club, Casual Coding,  3/24/2024,  4 am,  TURL011
+Surf Club, Casual Coding,  3/24/2024,  4 am,  TURL011\
