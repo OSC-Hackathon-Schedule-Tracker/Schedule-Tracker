@@ -1,3 +1,8 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 #root{
     font-family: "Roboto Slab", serif;
     font-size: 25px;
@@ -87,6 +92,16 @@ body::after {
   align-items: center;
   background-size: cover; 
   background-repeat: no-repeat; 
+  padding-bottom: 50px;
+  min-height: calc(100vh - 50px);
+}
+
+footer {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  height: 50px; /* Adjust this value as needed */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -124,16 +139,22 @@ body::after {
   font-size: 20px;
   font-family: "Roboto Slab", serif;
   width: 900px; 
-  height: 150px; 
-  border: 1.5px solid black;
-  margin: 20px; 
-  padding: 10px; 
+  height: 200px; 
+  border: none;
+  margin: 3px; 
+  padding-top: 25px;
+  padding-left: 0;
   background-color: white; 
   overflow-y: auto;
   overflow-x: hidden;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+.text-box:not(:last-child) {
+  border-bottom: 3px solid black;
+}
+
 
 
 
