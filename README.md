@@ -13,5 +13,5 @@ Additional Requirements:
 -An api key is required for the calls to openai. (https://platform.openai.com/api-keys)
 
 Running Program:
-run bot.js through the terminal to add events from announcements to schedule.txt
-run communication.js through the terminal before entering "npm start" in the terminal while in the schedule-website directory in order to run the website
+-run bot.js through the terminal to add events from announcements to schedule.txt
+-run communication.js through the terminal before entering "npm start" in the terminal while in the schedule-website directory in order to run the website
