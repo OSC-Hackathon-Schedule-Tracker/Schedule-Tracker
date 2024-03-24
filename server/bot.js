@@ -18,12 +18,19 @@ bot.once(Events.ClientReady, readyClient => {
     console.log("Logged in as " + bot.user.tag);
 });
 
+// bot checks all messages sent in announcements to see if any are referring to events
 bot.on("messageCreate", async (message) => {
     if(message.channel.name == "announcements") {
-        const date = "March 23rd, 2024";
-        const response = await main(message.content, date);
+        let response = await main(message.content);
+        if (response.indexOf("[") != -1) {
+            response = response.split("[").join("");
+            response = response.split("]").join("");
+        }
         if (response != "No Event") {
             await updateschedule(response, message.guild.name);
+        }
+        else {
+            console.log("No Event");
         }
     }
 });
