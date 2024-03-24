@@ -66,22 +66,22 @@ body::before, body::after {
   content: "";
   position: fixed;
   top: 0;
-  width: 15%; /* Adjust this value to change the width of the rectangles */
+  width: 15%; 
   height: 100%;
-  background: url('./contentimage.jpg'); /* Set the background image */
-  background-size: cover; /* Make the image cover the entire div */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background: url('./contentimage.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
   z-index: -1;
 }
 
 body::before {
   left: 0;
-  background-position: left; /* Add this line */
+  background-position: left; 
 }
 
 body::after {
   right: 0;
-  background-position: right; /* Add this line */
+  background-position: right; 
 }
 
 .App {
@@ -101,7 +101,7 @@ footer {
   background-color: orange;
   color: white;
   text-align: center;
-  height: 50px; /* Adjust this value as needed */
+  height: 50px; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
