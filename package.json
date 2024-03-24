@@ -3,6 +3,7 @@
     "@google-ai/generativelanguage": "^2.1.0",
     "cors": "^2.8.5",
     "discord.js": "^14.14.1",
+    "express": "^4.19.1",
     "google-auth": "^0.0.1",
     "luxon": "^3.4.4",
     "moment": "^2.30.1",
