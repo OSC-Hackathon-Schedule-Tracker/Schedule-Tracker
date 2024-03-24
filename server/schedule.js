@@ -110,7 +110,7 @@ function parse(rawstring) {
 // adds and removes events from schedule when necessary (function is called when the discord bot reads an announcement that is classified as an event)
 async function updateschedule(eventinfo, club) {
     events = [];
-    data = fs.readFileSync("Schedule-Tracker/server/schedule.txt", "utf-8");
+    data = fs.readFileSync("schedule.txt", "utf-8");
     events = data.split("\r\n");
 
     parsedinfo = parse(eventinfo)
@@ -148,7 +148,7 @@ async function updateschedule(eventinfo, club) {
     }
 
     datastring = events.join("\r\n");
-    fs.writeFile("Schedule-Tracker/server/schedule.txt", datastring, (err) => {
+    fs.writeFile("schedule.txt", datastring, (err) => {
         if (err) {
             console.error("./Error", err);
             return;
@@ -159,7 +159,7 @@ async function updateschedule(eventinfo, club) {
 // reads schedule data from a text file and places information in a hashmap
 function getschedule() {
     eventmap = {}
-    data = fs.readFileSync("Schedule-Tracker/server/schedule.txt", "utf-8");
+    data = fs.readFileSync("schedule.txt", "utf-8");
     events = data.split("\r\n");
     for (let i = 0; i < events.length; i++) {
         info = events[i].split(",");
