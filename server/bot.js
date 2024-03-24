@@ -2,6 +2,7 @@
 const { Client, Events, GatewayIntentBits } = require("discord.js");
 const { token } = require("./config.json");
 const { main } = require("./open.js");
+const { updateschedule } = require("./schedule.js");
 
 
 const bot = new Client({ intents: [
@@ -19,9 +20,11 @@ bot.once(Events.ClientReady, readyClient => {
 
 bot.on("messageCreate", async (message) => {
     if(message.channel.name == "announcements") {
-        const date = "March 23rd";
+        const date = "March 23rd, 2024";
         const response = await main(message.content, date);
-        console.log(response);
+        if (response != "No Event") {
+            await updateschedule(response, message.guild.name);
+        }
     }
 });
 
