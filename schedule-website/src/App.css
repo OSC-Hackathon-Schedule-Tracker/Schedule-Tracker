@@ -58,7 +58,7 @@ body {
   margin-bottom: 20px;
   font-weight: bold;
   color: #FA4616;
-  padding-top: 70px;
+  padding-top: 140px;
   padding-bottom: 5px;
 }
 
@@ -116,6 +116,8 @@ footer {
 }
 
 .App-header {
+  position: absolute;
+  top: 0;
   background-color: #0021A5;
   min-height: 137px;
   display: flex;
@@ -128,6 +130,7 @@ footer {
   width: 100%;
   justify-content: center;
 }
+
 
 .welcome-text {
   font-size: calc(80px + 2vmin);
