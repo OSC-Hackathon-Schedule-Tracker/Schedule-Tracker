@@ -6,9 +6,6 @@ function datepassed(event, curdate, curtime) {
 
     eventdate = event[2].trim();
     eventtime = event[3].trim();
-    
-    console.log("eventdate: " + eventdate);
-    console.log("currentdate: " + curdate);
 
     if (eventdate === curdate) {
         if (curtime.indexOf("PM") != -1 && eventtime.indexOf("am" != -1)) {
