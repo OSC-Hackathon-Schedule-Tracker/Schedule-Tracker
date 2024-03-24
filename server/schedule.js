@@ -80,4 +80,21 @@ async function updateschedule(eventinfo, club) {
     });
 }
 
-module.exports = { updateschedule };
+function getschedule() {
+    eventmap = {}
+    data = fs.readFileSync("Schedule-Tracker/server/schedule.txt", "utf-8");
+    events = data.split("\r\n");
+    for (let i = 0; i < events.length; i++) {
+        info = events[i].split(",");
+        club = info.splice(0, 1);
+        if (typeof eventmap[club] == "undefined") {
+            eventmap[club] = [info.slice()];
+        }
+        else {
+            eventmap[club].push(info.slice());
+        }
+    }
+    return eventmap;
+}
+
+module.exports = { updateschedule, getschedule };
