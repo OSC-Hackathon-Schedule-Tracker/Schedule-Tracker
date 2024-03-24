@@ -4,6 +4,7 @@ const { getschedule } = require("./schedule");
 
 // needs frontend connection to finish testing
 app.get("/getschedule", (req, res) => {
+    console.log("getting schedule");
     res.json(getschedule());
 });
 
