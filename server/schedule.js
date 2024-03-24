@@ -46,7 +46,7 @@ function parse(rawstring) {
 
 async function updateschedule(eventinfo, club) {
     events = [];
-    data = fs.readFileSync("Schedule-Tracker/server/sample.txt", "utf-8");
+    data = fs.readFileSync("Schedule-Tracker/server/schedule.txt", "utf-8");
     events = data.split("\r\n");
 
     parsedinfo = parse(eventinfo)
@@ -72,7 +72,7 @@ async function updateschedule(eventinfo, club) {
     }
 
     datastring = events.join("\r\n");
-    fs.writeFile("Schedule-Tracker/server/sample.txt", datastring, (err) => {
+    fs.writeFile("Schedule-Tracker/server/schedule.txt", datastring, (err) => {
         if (err) {
             console.error("./Error", err);
             return;
