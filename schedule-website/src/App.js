@@ -7,7 +7,7 @@ function App() {
   const [schedule, setSchedule] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/getschedule')
+    fetch('http://localhost:3002/getschedule')
       .then(response => response.json())
       .then(data => setSchedule(data));
   }, []);
