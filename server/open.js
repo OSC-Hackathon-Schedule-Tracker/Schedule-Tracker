@@ -2,7 +2,7 @@ const OpenAI = require("openai");
 const { apikey } = require("./config.json")
 const openai = new OpenAI({ apiKey: apikey});
 
-// api calls are made to openai to analyza an announcement and grab important information
+// api calls are made to openai to analyze an announcement and grab important information
 async function main(question) {
 
     datetime = new Date();
